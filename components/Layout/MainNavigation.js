@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
   return (
-    <header>
+    <header className={classes.header}>
       <Link href='/'>
         <a></a>
       </Link>

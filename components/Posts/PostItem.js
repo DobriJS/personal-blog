@@ -10,8 +10,8 @@ const PostItem = ({ post: { title, image, excerpt, date, slug } }) => {
     year: 'numeric'
   });
 
-  const linkPath = `/public/images/posts/${slug}/${image}`;
-  console.log(slug);
+  const imagePath = `/images/posts/${slug}/${image}`;
+  const linkPath = `/posts/${slug}`;
 
   return (
     <li className={classes.post}>
@@ -19,7 +19,7 @@ const PostItem = ({ post: { title, image, excerpt, date, slug } }) => {
         <a>
           <div className={classes.image}>
             <Image
-              src={linkPath}
+              src={imagePath}
               alt={title}
               width={300}
               height={200}
